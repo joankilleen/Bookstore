@@ -1,0 +1,5 @@
+org\books\persistence\BaseTest.class
+org\books\persistence\LoginDAOTest.class
+org\books\persistence\OrderDAOTest.class
+org\books\persistence\CustomerDAOTest.class
+org\books\persistence\BookDAOTest.class

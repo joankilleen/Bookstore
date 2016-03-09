@@ -1,0 +1,8 @@
+org\books\rest\application\CatalogResourceIT.class
+org\books\rest\application\OrdersResourceIT.class
+org\books\rest\application\CatalogResourceIT$1.class
+org\books\rest\application\CustomersResourceIT$2.class
+org\books\rest\application\CustomersResourceIT.class
+org\books\rest\application\CustomersResourceIT$1.class
+org\books\rest\application\OrdersResourceIT$1.class
+org\books\rest\application\BaseIT.class

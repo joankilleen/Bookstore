@@ -1,0 +1,14 @@
+org\books\presentation\CreditCardNumberValidator.class
+org\books\presentation\EmailValidator.class
+org\books\presentation\AccountBean.class
+org\books\presentation\CreditCardHelper.class
+org\books\presentation\OrderBean.class
+org\books\util\MessageFactory.class
+org\books\presentation\CreditCardNumberConverter.class
+org\books\presentation\ShoppingCart.class
+org\books\presentation\CartItem.class
+org\books\presentation\AccountBean$1.class
+org\books\presentation\NewCustomerBean.class
+org\books\presentation\LocaleBean.class
+org\books\presentation\CatalogBean.class
+org\books\presentation\OrderBean$1.class

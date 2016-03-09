@@ -1,0 +1,7 @@
+org\books\application\MailBeanIT.class
+org\books\application\SequenceServiceIT.class
+org\books\application\AmazonCatalogIT.class
+org\books\application\BaseIT.class
+org\books\application\CatalogServiceIT.class
+org\books\application\OrderServiceIT.class
+org\books\application\CustomerServiceIT.class

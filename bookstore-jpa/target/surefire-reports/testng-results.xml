@@ -1,0 +1,363 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="26" passed="26">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Command line suite" duration-ms="4835" started-at="2016-03-09T16:33:58Z" finished-at="2016-03-09T16:34:03Z">
+    <groups>
+    </groups>
+    <test name="Command line test" duration-ms="4835" started-at="2016-03-09T16:33:58Z" finished-at="2016-03-09T16:34:03Z">
+      <class name="org.books.persistence.CustomerDAOTest">
+        <test-method status="PASS" signature="setup()[pri:0, instance:org.books.persistence.CustomerDAOTest@6cd8737]" name="setup" is-config="true" duration-ms="11" started-at="2016-03-09T17:34:02Z" finished-at="2016-03-09T17:34:02Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="setUpMethod()[pri:0, instance:org.books.persistence.CustomerDAOTest@6cd8737]" name="setUpMethod" is-config="true" duration-ms="43" started-at="2016-03-09T17:34:02Z" finished-at="2016-03-09T17:34:02Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpMethod -->
+        <test-method status="PASS" signature="testCreate()[pri:0, instance:org.books.persistence.CustomerDAOTest@6cd8737]" name="testCreate" duration-ms="13" started-at="2016-03-09T17:34:02Z" finished-at="2016-03-09T17:34:02Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCreate -->
+        <test-method status="PASS" signature="tearDownMethod()[pri:0, instance:org.books.persistence.CustomerDAOTest@6cd8737]" name="tearDownMethod" is-config="true" duration-ms="0" started-at="2016-03-09T17:34:02Z" finished-at="2016-03-09T17:34:02Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownMethod -->
+        <test-method status="PASS" signature="setUpMethod()[pri:0, instance:org.books.persistence.CustomerDAOTest@6cd8737]" name="setUpMethod" is-config="true" duration-ms="18" started-at="2016-03-09T17:34:02Z" finished-at="2016-03-09T17:34:02Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpMethod -->
+        <test-method status="PASS" signature="testFindMaxNumber()[pri:0, instance:org.books.persistence.CustomerDAOTest@6cd8737]" name="testFindMaxNumber" duration-ms="17" started-at="2016-03-09T17:34:02Z" finished-at="2016-03-09T17:34:03Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testFindMaxNumber -->
+        <test-method status="PASS" signature="tearDownMethod()[pri:0, instance:org.books.persistence.CustomerDAOTest@6cd8737]" name="tearDownMethod" is-config="true" duration-ms="0" started-at="2016-03-09T17:34:03Z" finished-at="2016-03-09T17:34:03Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownMethod -->
+        <test-method status="PASS" signature="setUpMethod()[pri:0, instance:org.books.persistence.CustomerDAOTest@6cd8737]" name="setUpMethod" is-config="true" duration-ms="15" started-at="2016-03-09T17:34:03Z" finished-at="2016-03-09T17:34:03Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpMethod -->
+        <test-method status="PASS" signature="searchByNameToken()[pri:0, instance:org.books.persistence.CustomerDAOTest@6cd8737]" name="searchByNameToken" duration-ms="11" started-at="2016-03-09T17:34:03Z" depends-on-methods="org.books.persistence.CustomerDAOTest.testCreate" finished-at="2016-03-09T17:34:03Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- searchByNameToken -->
+        <test-method status="PASS" signature="tearDownMethod()[pri:0, instance:org.books.persistence.CustomerDAOTest@6cd8737]" name="tearDownMethod" is-config="true" duration-ms="0" started-at="2016-03-09T17:34:03Z" finished-at="2016-03-09T17:34:03Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownMethod -->
+        <test-method status="PASS" signature="setUpMethod()[pri:0, instance:org.books.persistence.CustomerDAOTest@6cd8737]" name="setUpMethod" is-config="true" duration-ms="11" started-at="2016-03-09T17:34:03Z" finished-at="2016-03-09T17:34:03Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpMethod -->
+        <test-method status="PASS" signature="find()[pri:0, instance:org.books.persistence.CustomerDAOTest@6cd8737]" name="find" duration-ms="10" started-at="2016-03-09T17:34:03Z" depends-on-methods="org.books.persistence.CustomerDAOTest.searchByNameToken" finished-at="2016-03-09T17:34:03Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- find -->
+        <test-method status="PASS" signature="tearDownMethod()[pri:0, instance:org.books.persistence.CustomerDAOTest@6cd8737]" name="tearDownMethod" is-config="true" duration-ms="1" started-at="2016-03-09T17:34:03Z" finished-at="2016-03-09T17:34:03Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownMethod -->
+        <test-method status="PASS" signature="setUpMethod()[pri:0, instance:org.books.persistence.CustomerDAOTest@6cd8737]" name="setUpMethod" is-config="true" duration-ms="11" started-at="2016-03-09T17:34:03Z" finished-at="2016-03-09T17:34:03Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpMethod -->
+        <test-method status="PASS" signature="uniqueEmailTest()[pri:0, instance:org.books.persistence.CustomerDAOTest@6cd8737]" name="uniqueEmailTest" duration-ms="8" started-at="2016-03-09T17:34:03Z" depends-on-methods="org.books.persistence.CustomerDAOTest.searchByNameToken" finished-at="2016-03-09T17:34:03Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- uniqueEmailTest -->
+        <test-method status="PASS" signature="tearDownMethod()[pri:0, instance:org.books.persistence.CustomerDAOTest@6cd8737]" name="tearDownMethod" is-config="true" duration-ms="1" started-at="2016-03-09T17:34:03Z" finished-at="2016-03-09T17:34:03Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownMethod -->
+        <test-method status="PASS" signature="setUpMethod()[pri:0, instance:org.books.persistence.CustomerDAOTest@6cd8737]" name="setUpMethod" is-config="true" duration-ms="11" started-at="2016-03-09T17:34:03Z" finished-at="2016-03-09T17:34:03Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpMethod -->
+        <test-method status="PASS" signature="testUpdate()[pri:0, instance:org.books.persistence.CustomerDAOTest@6cd8737]" name="testUpdate" duration-ms="12" started-at="2016-03-09T17:34:03Z" depends-on-methods="org.books.persistence.CustomerDAOTest.find" finished-at="2016-03-09T17:34:03Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testUpdate -->
+        <test-method status="PASS" signature="setUpMethod()[pri:0, instance:org.books.persistence.CustomerDAOTest@6cd8737]" name="setUpMethod" is-config="true" duration-ms="9" started-at="2016-03-09T17:34:03Z" finished-at="2016-03-09T17:34:03Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpMethod -->
+        <test-method status="PASS" signature="tearDownMethod()[pri:0, instance:org.books.persistence.CustomerDAOTest@6cd8737]" name="tearDownMethod" is-config="true" duration-ms="0" started-at="2016-03-09T17:34:03Z" finished-at="2016-03-09T17:34:03Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownMethod -->
+        <test-method status="PASS" signature="findByNumber()[pri:0, instance:org.books.persistence.CustomerDAOTest@6cd8737]" name="findByNumber" duration-ms="3" started-at="2016-03-09T17:34:03Z" depends-on-methods="org.books.persistence.CustomerDAOTest.uniqueEmailTest" finished-at="2016-03-09T17:34:03Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- findByNumber -->
+        <test-method status="PASS" signature="tearDownMethod()[pri:0, instance:org.books.persistence.CustomerDAOTest@6cd8737]" name="tearDownMethod" is-config="true" duration-ms="0" started-at="2016-03-09T17:34:03Z" finished-at="2016-03-09T17:34:03Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownMethod -->
+        <test-method status="PASS" signature="setUpMethod()[pri:0, instance:org.books.persistence.CustomerDAOTest@6cd8737]" name="setUpMethod" is-config="true" duration-ms="9" started-at="2016-03-09T17:34:03Z" finished-at="2016-03-09T17:34:03Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpMethod -->
+        <test-method status="PASS" signature="testDelete()[pri:0, instance:org.books.persistence.CustomerDAOTest@6cd8737]" name="testDelete" duration-ms="7" started-at="2016-03-09T17:34:03Z" depends-on-methods="org.books.persistence.CustomerDAOTest.testUpdate" finished-at="2016-03-09T17:34:03Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testDelete -->
+        <test-method status="PASS" signature="tearDownClass()[pri:0, instance:org.books.persistence.CustomerDAOTest@6cd8737]" name="tearDownClass" is-config="true" duration-ms="0" started-at="2016-03-09T17:34:03Z" finished-at="2016-03-09T17:34:03Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownClass -->
+        <test-method status="PASS" signature="tearDownMethod()[pri:0, instance:org.books.persistence.CustomerDAOTest@6cd8737]" name="tearDownMethod" is-config="true" duration-ms="0" started-at="2016-03-09T17:34:03Z" finished-at="2016-03-09T17:34:03Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownMethod -->
+      </class> <!-- org.books.persistence.CustomerDAOTest -->
+      <class name="org.books.persistence.LoginDAOTest">
+        <test-method status="PASS" signature="setup()[pri:0, instance:org.books.persistence.LoginDAOTest@1554909b]" name="setup" is-config="true" duration-ms="10" started-at="2016-03-09T17:34:03Z" finished-at="2016-03-09T17:34:03Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="setUpMethod()[pri:0, instance:org.books.persistence.LoginDAOTest@1554909b]" name="setUpMethod" is-config="true" duration-ms="27" started-at="2016-03-09T17:34:03Z" finished-at="2016-03-09T17:34:03Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpMethod -->
+        <test-method status="PASS" signature="testCreate()[pri:0, instance:org.books.persistence.LoginDAOTest@1554909b]" name="testCreate" duration-ms="6" started-at="2016-03-09T17:34:03Z" finished-at="2016-03-09T17:34:03Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCreate -->
+        <test-method status="PASS" signature="tearDownMethod()[pri:0, instance:org.books.persistence.LoginDAOTest@1554909b]" name="tearDownMethod" is-config="true" duration-ms="0" started-at="2016-03-09T17:34:03Z" finished-at="2016-03-09T17:34:03Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownMethod -->
+        <test-method status="PASS" signature="setUpMethod()[pri:0, instance:org.books.persistence.LoginDAOTest@1554909b]" name="setUpMethod" is-config="true" duration-ms="15" started-at="2016-03-09T17:34:03Z" finished-at="2016-03-09T17:34:03Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpMethod -->
+        <test-method status="PASS" signature="testFind()[pri:0, instance:org.books.persistence.LoginDAOTest@1554909b]" name="testFind" duration-ms="7" started-at="2016-03-09T17:34:03Z" depends-on-methods="org.books.persistence.LoginDAOTest.testCreate" finished-at="2016-03-09T17:34:03Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testFind -->
+        <test-method status="PASS" signature="tearDownMethod()[pri:0, instance:org.books.persistence.LoginDAOTest@1554909b]" name="tearDownMethod" is-config="true" duration-ms="1" started-at="2016-03-09T17:34:03Z" finished-at="2016-03-09T17:34:03Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownMethod -->
+        <test-method status="PASS" signature="setUpMethod()[pri:0, instance:org.books.persistence.LoginDAOTest@1554909b]" name="setUpMethod" is-config="true" duration-ms="10" started-at="2016-03-09T17:34:03Z" finished-at="2016-03-09T17:34:03Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpMethod -->
+        <test-method status="PASS" signature="testUpdate()[pri:0, instance:org.books.persistence.LoginDAOTest@1554909b]" name="testUpdate" duration-ms="8" started-at="2016-03-09T17:34:03Z" depends-on-methods="org.books.persistence.LoginDAOTest.testFind" finished-at="2016-03-09T17:34:03Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testUpdate -->
+        <test-method status="PASS" signature="tearDownMethod()[pri:0, instance:org.books.persistence.LoginDAOTest@1554909b]" name="tearDownMethod" is-config="true" duration-ms="0" started-at="2016-03-09T17:34:03Z" finished-at="2016-03-09T17:34:03Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownMethod -->
+        <test-method status="PASS" signature="setUpMethod()[pri:0, instance:org.books.persistence.LoginDAOTest@1554909b]" name="setUpMethod" is-config="true" duration-ms="8" started-at="2016-03-09T17:34:03Z" finished-at="2016-03-09T17:34:03Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpMethod -->
+        <test-method status="PASS" signature="testDelete()[pri:0, instance:org.books.persistence.LoginDAOTest@1554909b]" name="testDelete" duration-ms="11" started-at="2016-03-09T17:34:03Z" depends-on-methods="org.books.persistence.LoginDAOTest.testUpdate" finished-at="2016-03-09T17:34:03Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testDelete -->
+        <test-method status="PASS" signature="tearDownMethod()[pri:0, instance:org.books.persistence.LoginDAOTest@1554909b]" name="tearDownMethod" is-config="true" duration-ms="1" started-at="2016-03-09T17:34:03Z" finished-at="2016-03-09T17:34:03Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownMethod -->
+        <test-method status="PASS" signature="tearDownClass()[pri:0, instance:org.books.persistence.LoginDAOTest@1554909b]" name="tearDownClass" is-config="true" duration-ms="0" started-at="2016-03-09T17:34:03Z" finished-at="2016-03-09T17:34:03Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownClass -->
+      </class> <!-- org.books.persistence.LoginDAOTest -->
+      <class name="org.books.persistence.OrderDAOTest">
+        <test-method status="PASS" signature="setup()[pri:0, instance:org.books.persistence.OrderDAOTest@6bf256fa]" name="setup" is-config="true" duration-ms="9" started-at="2016-03-09T17:34:03Z" finished-at="2016-03-09T17:34:03Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="setUpMethod()[pri:0, instance:org.books.persistence.OrderDAOTest@6bf256fa]" name="setUpMethod" is-config="true" duration-ms="34" started-at="2016-03-09T17:34:03Z" finished-at="2016-03-09T17:34:03Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpMethod -->
+        <test-method status="PASS" signature="testCreate()[pri:0, instance:org.books.persistence.OrderDAOTest@6bf256fa]" name="testCreate" duration-ms="44" started-at="2016-03-09T17:34:03Z" finished-at="2016-03-09T17:34:03Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCreate -->
+        <test-method status="PASS" signature="tearDownMethod()[pri:0, instance:org.books.persistence.OrderDAOTest@6bf256fa]" name="tearDownMethod" is-config="true" duration-ms="0" started-at="2016-03-09T17:34:03Z" finished-at="2016-03-09T17:34:03Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownMethod -->
+        <test-method status="PASS" signature="setUpMethod()[pri:0, instance:org.books.persistence.OrderDAOTest@6bf256fa]" name="setUpMethod" is-config="true" duration-ms="15" started-at="2016-03-09T17:34:03Z" finished-at="2016-03-09T17:34:03Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpMethod -->
+        <test-method status="PASS" signature="testFindMaxNumber()[pri:0, instance:org.books.persistence.OrderDAOTest@6bf256fa]" name="testFindMaxNumber" duration-ms="6" started-at="2016-03-09T17:34:03Z" finished-at="2016-03-09T17:34:03Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testFindMaxNumber -->
+        <test-method status="PASS" signature="tearDownMethod()[pri:0, instance:org.books.persistence.OrderDAOTest@6bf256fa]" name="tearDownMethod" is-config="true" duration-ms="0" started-at="2016-03-09T17:34:03Z" finished-at="2016-03-09T17:34:03Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownMethod -->
+        <test-method status="PASS" signature="setUpMethod()[pri:0, instance:org.books.persistence.OrderDAOTest@6bf256fa]" name="setUpMethod" is-config="true" duration-ms="20" started-at="2016-03-09T17:34:03Z" finished-at="2016-03-09T17:34:03Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpMethod -->
+        <test-method status="PASS" signature="testPlaceOrder()[pri:0, instance:org.books.persistence.OrderDAOTest@6bf256fa]" name="testPlaceOrder" duration-ms="31" started-at="2016-03-09T17:34:03Z" finished-at="2016-03-09T17:34:03Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testPlaceOrder -->
+        <test-method status="PASS" signature="tearDownMethod()[pri:0, instance:org.books.persistence.OrderDAOTest@6bf256fa]" name="tearDownMethod" is-config="true" duration-ms="0" started-at="2016-03-09T17:34:03Z" finished-at="2016-03-09T17:34:03Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownMethod -->
+        <test-method status="PASS" signature="setUpMethod()[pri:0, instance:org.books.persistence.OrderDAOTest@6bf256fa]" name="setUpMethod" is-config="true" duration-ms="15" started-at="2016-03-09T17:34:03Z" finished-at="2016-03-09T17:34:03Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpMethod -->
+        <test-method status="PASS" signature="testPlaceOrderNoBook()[pri:0, instance:org.books.persistence.OrderDAOTest@6bf256fa]" name="testPlaceOrderNoBook" duration-ms="6" started-at="2016-03-09T17:34:03Z" finished-at="2016-03-09T17:34:03Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testPlaceOrderNoBook -->
+        <test-method status="PASS" signature="setUpMethod()[pri:0, instance:org.books.persistence.OrderDAOTest@6bf256fa]" name="setUpMethod" is-config="true" duration-ms="14" started-at="2016-03-09T17:34:03Z" finished-at="2016-03-09T17:34:03Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpMethod -->
+        <test-method status="PASS" signature="tearDownMethod()[pri:0, instance:org.books.persistence.OrderDAOTest@6bf256fa]" name="tearDownMethod" is-config="true" duration-ms="0" started-at="2016-03-09T17:34:03Z" finished-at="2016-03-09T17:34:03Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownMethod -->
+        <test-method status="PASS" signature="testPlaceOrderNoCustomer()[pri:0, instance:org.books.persistence.OrderDAOTest@6bf256fa]" name="testPlaceOrderNoCustomer" duration-ms="1" started-at="2016-03-09T17:34:03Z" finished-at="2016-03-09T17:34:03Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testPlaceOrderNoCustomer -->
+        <test-method status="PASS" signature="tearDownMethod()[pri:0, instance:org.books.persistence.OrderDAOTest@6bf256fa]" name="tearDownMethod" is-config="true" duration-ms="0" started-at="2016-03-09T17:34:03Z" finished-at="2016-03-09T17:34:03Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownMethod -->
+        <test-method status="PASS" signature="setUpMethod()[pri:0, instance:org.books.persistence.OrderDAOTest@6bf256fa]" name="setUpMethod" is-config="true" duration-ms="11" started-at="2016-03-09T17:34:03Z" finished-at="2016-03-09T17:34:03Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpMethod -->
+        <test-method status="PASS" signature="testSearch()[pri:0, instance:org.books.persistence.OrderDAOTest@6bf256fa]" name="testSearch" duration-ms="20" started-at="2016-03-09T17:34:03Z" depends-on-methods="org.books.persistence.OrderDAOTest.testCreate" finished-at="2016-03-09T17:34:03Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSearch -->
+        <test-method status="PASS" signature="tearDownMethod()[pri:0, instance:org.books.persistence.OrderDAOTest@6bf256fa]" name="tearDownMethod" is-config="true" duration-ms="0" started-at="2016-03-09T17:34:03Z" finished-at="2016-03-09T17:34:03Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownMethod -->
+        <test-method status="PASS" signature="setUpMethod()[pri:0, instance:org.books.persistence.OrderDAOTest@6bf256fa]" name="setUpMethod" is-config="true" duration-ms="13" started-at="2016-03-09T17:34:03Z" finished-at="2016-03-09T17:34:03Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpMethod -->
+        <test-method status="PASS" signature="testSearchNumber()[pri:0, instance:org.books.persistence.OrderDAOTest@6bf256fa]" name="testSearchNumber" duration-ms="17" started-at="2016-03-09T17:34:03Z" depends-on-methods="org.books.persistence.OrderDAOTest.testSearch" finished-at="2016-03-09T17:34:03Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSearchNumber -->
+        <test-method status="PASS" signature="tearDownMethod()[pri:0, instance:org.books.persistence.OrderDAOTest@6bf256fa]" name="tearDownMethod" is-config="true" duration-ms="0" started-at="2016-03-09T17:34:03Z" finished-at="2016-03-09T17:34:03Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownMethod -->
+        <test-method status="PASS" signature="setUpMethod()[pri:0, instance:org.books.persistence.OrderDAOTest@6bf256fa]" name="setUpMethod" is-config="true" duration-ms="8" started-at="2016-03-09T17:34:03Z" finished-at="2016-03-09T17:34:03Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpMethod -->
+        <test-method status="PASS" signature="testUpdate()[pri:0, instance:org.books.persistence.OrderDAOTest@6bf256fa]" name="testUpdate" duration-ms="18" started-at="2016-03-09T17:34:03Z" depends-on-methods="org.books.persistence.OrderDAOTest.testSearchNumber" finished-at="2016-03-09T17:34:03Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testUpdate -->
+        <test-method status="PASS" signature="tearDownMethod()[pri:0, instance:org.books.persistence.OrderDAOTest@6bf256fa]" name="tearDownMethod" is-config="true" duration-ms="0" started-at="2016-03-09T17:34:03Z" finished-at="2016-03-09T17:34:03Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownMethod -->
+        <test-method status="PASS" signature="setUpMethod()[pri:0, instance:org.books.persistence.OrderDAOTest@6bf256fa]" name="setUpMethod" is-config="true" duration-ms="15" started-at="2016-03-09T17:34:03Z" finished-at="2016-03-09T17:34:03Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpMethod -->
+        <test-method status="PASS" signature="testDelete()[pri:0, instance:org.books.persistence.OrderDAOTest@6bf256fa]" name="testDelete" duration-ms="19" started-at="2016-03-09T17:34:03Z" depends-on-methods="org.books.persistence.OrderDAOTest.testUpdate" finished-at="2016-03-09T17:34:03Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testDelete -->
+        <test-method status="PASS" signature="tearDownClass()[pri:0, instance:org.books.persistence.OrderDAOTest@6bf256fa]" name="tearDownClass" is-config="true" duration-ms="1" started-at="2016-03-09T17:34:03Z" finished-at="2016-03-09T17:34:03Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownClass -->
+        <test-method status="PASS" signature="tearDownMethod()[pri:0, instance:org.books.persistence.OrderDAOTest@6bf256fa]" name="tearDownMethod" is-config="true" duration-ms="0" started-at="2016-03-09T17:34:03Z" finished-at="2016-03-09T17:34:03Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownMethod -->
+      </class> <!-- org.books.persistence.OrderDAOTest -->
+      <class name="org.books.persistence.BookDAOTest">
+        <test-method status="PASS" signature="setup()[pri:0, instance:org.books.persistence.BookDAOTest@506e6d5e]" name="setup" is-config="true" duration-ms="3346" started-at="2016-03-09T17:33:58Z" finished-at="2016-03-09T17:34:02Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="setUpMethod()[pri:0, instance:org.books.persistence.BookDAOTest@506e6d5e]" name="setUpMethod" is-config="true" duration-ms="248" started-at="2016-03-09T17:34:02Z" finished-at="2016-03-09T17:34:02Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpMethod -->
+        <test-method status="PASS" signature="buildCriteriaQuery()[pri:0, instance:org.books.persistence.BookDAOTest@506e6d5e]" name="buildCriteriaQuery" duration-ms="41" started-at="2016-03-09T17:34:02Z" finished-at="2016-03-09T17:34:02Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- buildCriteriaQuery -->
+        <test-method status="PASS" signature="setUpMethod()[pri:0, instance:org.books.persistence.BookDAOTest@506e6d5e]" name="setUpMethod" is-config="true" duration-ms="19" started-at="2016-03-09T17:34:02Z" finished-at="2016-03-09T17:34:02Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpMethod -->
+        <test-method status="PASS" signature="tearDownMethod()[pri:0, instance:org.books.persistence.BookDAOTest@506e6d5e]" name="tearDownMethod" is-config="true" duration-ms="0" started-at="2016-03-09T17:34:02Z" finished-at="2016-03-09T17:34:02Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownMethod -->
+        <test-method status="PASS" signature="testCreate()[pri:0, instance:org.books.persistence.BookDAOTest@506e6d5e]" name="testCreate" duration-ms="452" started-at="2016-03-09T17:34:02Z" finished-at="2016-03-09T17:34:02Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCreate -->
+        <test-method status="PASS" signature="tearDownMethod()[pri:0, instance:org.books.persistence.BookDAOTest@506e6d5e]" name="tearDownMethod" is-config="true" duration-ms="1" started-at="2016-03-09T17:34:02Z" finished-at="2016-03-09T17:34:02Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownMethod -->
+        <test-method status="PASS" signature="setUpMethod()[pri:0, instance:org.books.persistence.BookDAOTest@506e6d5e]" name="setUpMethod" is-config="true" duration-ms="14" started-at="2016-03-09T17:34:03Z" finished-at="2016-03-09T17:34:03Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpMethod -->
+        <test-method status="PASS" signature="find()[pri:0, instance:org.books.persistence.BookDAOTest@506e6d5e]" name="find" duration-ms="6" started-at="2016-03-09T17:34:03Z" depends-on-methods="org.books.persistence.BookDAOTest.buildCriteriaQuery" finished-at="2016-03-09T17:34:03Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- find -->
+        <test-method status="PASS" signature="tearDownMethod()[pri:0, instance:org.books.persistence.BookDAOTest@506e6d5e]" name="tearDownMethod" is-config="true" duration-ms="0" started-at="2016-03-09T17:34:03Z" finished-at="2016-03-09T17:34:03Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownMethod -->
+        <test-method status="PASS" signature="setUpMethod()[pri:0, instance:org.books.persistence.BookDAOTest@506e6d5e]" name="setUpMethod" is-config="true" duration-ms="12" started-at="2016-03-09T17:34:03Z" finished-at="2016-03-09T17:34:03Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpMethod -->
+        <test-method status="PASS" signature="testUpdate()[pri:0, instance:org.books.persistence.BookDAOTest@506e6d5e]" name="testUpdate" duration-ms="10" started-at="2016-03-09T17:34:03Z" depends-on-methods="org.books.persistence.BookDAOTest.find" finished-at="2016-03-09T17:34:03Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testUpdate -->
+        <test-method status="PASS" signature="tearDownMethod()[pri:0, instance:org.books.persistence.BookDAOTest@506e6d5e]" name="tearDownMethod" is-config="true" duration-ms="0" started-at="2016-03-09T17:34:03Z" finished-at="2016-03-09T17:34:03Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownMethod -->
+        <test-method status="PASS" signature="setUpMethod()[pri:0, instance:org.books.persistence.BookDAOTest@506e6d5e]" name="setUpMethod" is-config="true" duration-ms="9" started-at="2016-03-09T17:34:03Z" finished-at="2016-03-09T17:34:03Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpMethod -->
+        <test-method status="PASS" signature="testDelete()[pri:0, instance:org.books.persistence.BookDAOTest@506e6d5e]" name="testDelete" duration-ms="11" started-at="2016-03-09T17:34:03Z" depends-on-methods="org.books.persistence.BookDAOTest.testUpdate" finished-at="2016-03-09T17:34:03Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testDelete -->
+        <test-method status="PASS" signature="tearDownMethod()[pri:0, instance:org.books.persistence.BookDAOTest@506e6d5e]" name="tearDownMethod" is-config="true" duration-ms="0" started-at="2016-03-09T17:34:03Z" finished-at="2016-03-09T17:34:03Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownMethod -->
+        <test-method status="PASS" signature="tearDownClass()[pri:0, instance:org.books.persistence.BookDAOTest@506e6d5e]" name="tearDownClass" is-config="true" duration-ms="0" started-at="2016-03-09T17:34:03Z" finished-at="2016-03-09T17:34:03Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownClass -->
+      </class> <!-- org.books.persistence.BookDAOTest -->
+    </test> <!-- Command line test -->
+  </suite> <!-- Command line suite -->
+</testng-results>

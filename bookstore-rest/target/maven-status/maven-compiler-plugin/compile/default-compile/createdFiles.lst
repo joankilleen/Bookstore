@@ -1,0 +1,9 @@
+org\books\rest\application\CustomersResource$1.class
+org\books\rest\application\OrdersResource$1.class
+org\books\rest\application\CatalogResource$1.class
+org\books\rest\application\CustomersResource.class
+org\books\rest\util\LoggingFilter.class
+org\books\rest\util\ValidationHandler.class
+org\books\rest\application\CatalogResource.class
+org\books\rest\application\ApplicationConfig.class
+org\books\rest\application\OrdersResource.class
