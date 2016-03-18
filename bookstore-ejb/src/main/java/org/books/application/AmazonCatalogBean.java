@@ -37,6 +37,7 @@ import org.amazon.webservice.soap.Price;
 import org.books.data.Binding;
 import org.books.data.dto.BookDTO;
 import org.books.data.dto.BookInfo;
+import org.books.data.dto.PageInfo;
 
 /**
  *
@@ -66,7 +67,7 @@ public class AmazonCatalogBean implements AmazonCatalog {
     public List<BookInfo> itemSearch(String keywords) {
         List<BookInfo> resultList = new ArrayList<>();
 
-        int totalPages = 10;
+        int totalPages = MAX_ITEM_PAGES;
         for (int i = 1; i <= totalPages && i <= MAX_ITEM_PAGES; i++) {
             log("going to request page " + i);
 
@@ -89,6 +90,37 @@ public class AmazonCatalogBean implements AmazonCatalog {
         }
         return resultList;
 
+    }
+    public PageInfo itemSearchPaged(String keywords, BigInteger pageToLoad){
+        PageInfo pageInfo = new PageInfo();
+        List<BookInfo> resultList = new ArrayList<>();
+        
+        int totalPages = MAX_ITEM_PAGES;
+        long i = 1;
+        for (i = pageToLoad.longValue(); i <= totalPages && i <= MAX_ITEM_PAGES && resultList.size() < 10;  i++) {
+            log("going to request page " + i);
+
+            ItemSearchResponse searchResponse = sendSearchRequest(keywords, new BigInteger(new Long(i).toString()));
+
+            try {
+                totalPages = processSearchResults(searchResponse, resultList);
+                log("Total pages found:  " + totalPages);
+            } catch (InternalNoResultsException ex) {
+                log(ex.getMessage());
+
+                break;
+            }
+            try {
+                Thread.sleep(MILLSECOND_DELAY);
+            } catch (InterruptedException ex) {
+                log(ex.getLocalizedMessage());
+                break;
+            }
+        }
+        pageInfo.setBookItems(resultList);
+        pageInfo.setLastPageLoaded(new BigInteger(new Long(i).toString()));
+        pageInfo.setMore(i<totalPages);
+        return pageInfo;
     }
 
     private ItemSearchRequest createSearchRequest(String keywords, BigInteger itemPage) {

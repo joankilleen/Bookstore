@@ -5,6 +5,7 @@
  */
 package org.books.data.dto;
 
+import java.io.Serializable;
 import java.math.BigInteger;
 import java.util.ArrayList;
 import java.util.List;
@@ -13,7 +14,7 @@ import java.util.List;
  *
  * @author Joan
  */
-public class PageInfo {
+public class PageInfo implements Serializable{
     private List<BookInfo> bookItems = new ArrayList<>();
     private boolean more;
     private BigInteger lastPageLoaded;
