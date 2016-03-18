@@ -112,17 +112,29 @@ public class CatalogBean implements Serializable {
     
     public String searchBook(){
         
-        pageInfo = catalogService.searchBooksPaged(this.keywords, lastPageLoaded.add(BigInteger.ONE));
-        if (pageInfo.getBookItems().isEmpty()) {
-            MessageFactory.info(NO_BOOK_FOUND_ID);
-            return null;
-        }
-        lastPageLoaded = pageInfo.getLastPageLoaded();
+        searchPaged(BigInteger.ONE);
+        
         return null;
     }
     
     public String selectBook(BookInfo book){
         this.selectedBook = book;
         return "bookDetails";
+    }
+    
+    public String next(){
+        searchPaged(lastPageLoaded.add(BigInteger.ONE));
+        return null;
+    }
+    public String prev(){
+        searchPaged(lastPageLoaded.subtract(BigInteger.ONE));
+        return null;
+    }
+    private void searchPaged(BigInteger page){
+        pageInfo = catalogService.searchBooksPaged(this.keywords, page);
+        if (pageInfo.getBookItems().isEmpty()) {
+            MessageFactory.info(NO_BOOK_FOUND_ID);
+        }
+        lastPageLoaded = pageInfo.getLastPageLoaded();
     }
 }

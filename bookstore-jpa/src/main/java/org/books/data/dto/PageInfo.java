@@ -16,7 +16,7 @@ import java.util.List;
  */
 public class PageInfo implements Serializable{
     private List<BookInfo> bookItems = new ArrayList<>();
-    private boolean more;
+    private boolean more = false;
     private BigInteger lastPageLoaded;
 
     public List<BookInfo> getBookItems() {

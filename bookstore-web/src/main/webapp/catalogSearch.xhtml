@@ -48,8 +48,14 @@
                             </f:facet>
                             <h:commandButton value="#{texts.addToCart}" action="#{shoppingCart.addItem(book)}"/>                       
                         </h:column>
+                        
                     </h:dataTable>
+                    <h:panelGrid columns="2">
+                        <h:commandButton value="prev" action="#{catalogBean.prev()}" rendered="#{catalogBean.pageInfo.more}"/>
+                        <h:commandButton value="next" action="#{catalogBean.next()}" rendered="#{catalogBean.pageInfo.more}"/> 
+                    </h:panelGrid>
                 </h:form>
+                
             </ui:define>
         </ui:composition>
                          
