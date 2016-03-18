@@ -6,6 +6,7 @@
 package org.books.presentation;
 
 import java.io.Serializable;
+import java.math.BigInteger;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.logging.Level;
@@ -18,6 +19,7 @@ import org.books.application.*;
 import org.books.application.exception.BookNotFoundException;
 import org.books.data.dto.BookDTO;
 import org.books.data.dto.BookInfo;
+import org.books.data.dto.PageInfo;
 import org.books.util.MessageFactory;
 
 /**
@@ -33,15 +35,33 @@ public class CatalogBean implements Serializable {
     private BookInfo selectedBook;
     private BookDTO selectedBookFullInfo = null;
     private String isbn;
-    private List <BookInfo> books;
+    //private List <BookInfo> books;
+    private PageInfo pageInfo = new PageInfo();
+    private BigInteger lastPageLoaded = BigInteger.ZERO;
     private static final String NO_BOOK_FOUND_ID = "org.books.presentation.NO_BOOK_FOUND";
 
-    public List<BookInfo> getBooks() {
-        return books;
+    public PageInfo getPageInfo() {
+        return pageInfo;
     }
 
+    public void setPageInfo(PageInfo pageInfo) {
+        this.pageInfo = pageInfo;
+    }
+
+    public BigInteger getLastPageLoaded() {
+        return lastPageLoaded;
+    }
+
+    public void setLastPageLoaded(BigInteger lastPageLoaded) {
+        this.lastPageLoaded = lastPageLoaded;
+    }
+
+    
+    public List<BookInfo> getBooks() {
+        return pageInfo.getBookItems();
+    }
     public void setBooks(List<BookInfo> books) {
-        this.books = books;
+        pageInfo.setBookItems(books);
     }
     private String keywords;
 
@@ -70,9 +90,7 @@ public class CatalogBean implements Serializable {
     }
  
 
-    public void setBooks(ArrayList<BookInfo> books) {
-        this.books = books;
-    }
+    
 
     public String getKeywords() {
         return keywords;
@@ -94,11 +112,12 @@ public class CatalogBean implements Serializable {
     
     public String searchBook(){
         
-        books = catalogService.searchBooks(this.keywords);
-        if (books.isEmpty()) {
+        pageInfo = catalogService.searchBooksPaged(this.keywords, lastPageLoaded.add(BigInteger.ONE));
+        if (pageInfo.getBookItems().isEmpty()) {
             MessageFactory.info(NO_BOOK_FOUND_ID);
             return null;
         }
+        lastPageLoaded = pageInfo.getLastPageLoaded();
         return null;
     }
     
