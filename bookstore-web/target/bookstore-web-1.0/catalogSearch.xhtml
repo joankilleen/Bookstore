@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:h="http://xmlns.jcp.org/jsf/html"
       xmlns:f="http://xmlns.jcp.org/jsf/core">
-    
+    <!--paging version-->
     <h:body>
         <ui:composition template="template.xhtml" xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
             <ui:define name="header">
@@ -13,11 +13,12 @@
             </ui:define>  
             <ui:define name="content">
                 <h:form id="main">
-                    <h:panelGrid columns ="4">
+                    <h:panelGrid columns ="5">
                         <h:outputLabel for="keywords" value="#{texts.keywords}"/>
                         <h:inputText id="keywords" value="#{catalogBean.keywords}" required="true"
                                      requiredMessage="#{texts.enterAValue}"/>
                         <h:commandButton value="#{texts.searchBook}" action="#{catalogBean.searchBook()}"/>
+                        <h:commandButton value="next" action="#{catalogBean.next()}" rendered="#{catalogBean.pageInfo.more}"/>
                         <h:message for="keywords" infoClass="info" errorClass="error"/>
                         
                     </h:panelGrid>
@@ -48,8 +49,13 @@
                             </f:facet>
                             <h:commandButton value="#{texts.addToCart}" action="#{shoppingCart.addItem(book)}"/>                       
                         </h:column>
+                        
                     </h:dataTable>
+                    <h:panelGrid columns="1">
+                        <h:commandButton value="next" action="#{catalogBean.next()}" rendered="#{catalogBean.pageInfo.more}"/> 
+                    </h:panelGrid>
                 </h:form>
+                
             </ui:define>
         </ui:composition>
                          

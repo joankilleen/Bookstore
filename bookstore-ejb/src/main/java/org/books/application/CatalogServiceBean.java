@@ -1,5 +1,6 @@
 package org.books.application;
 
+import java.math.BigInteger;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.logging.Logger;
@@ -12,6 +13,7 @@ import org.books.application.exception.BookNotFoundException;
 import org.books.application.util.Tracer;
 import org.books.data.dto.BookDTO;
 import org.books.data.dto.BookInfo;
+import org.books.data.dto.PageInfo;
 import org.books.persistence.BookDAO;
 
 @Stateless(name = "CatalogService")
@@ -52,6 +54,11 @@ public class CatalogServiceBean implements CatalogService {
     public List<BookInfo> searchBooks(String keywords) {
         //log("Search books with keywords: " + keywords);
         return amazonCatalog.itemSearch(keywords);
+    }
+    
+    @Override
+    public PageInfo searchBooksPaged(String keywords, BigInteger pageToLoad){
+        return amazonCatalog.itemSearchPaged(keywords, pageToLoad);
     }
 
     @Override

@@ -5,50 +5,72 @@
  */
 package org.books.application;
 
+import java.math.BigInteger;
 import java.util.List;
 import javax.naming.Context;
 import javax.naming.InitialContext;
 import org.books.data.dto.BookDTO;
 import org.books.data.dto.BookInfo;
+import org.books.data.dto.PageInfo;
 import org.testng.annotations.Test;
 
 /**
  *
  * @author Joan
  */
-public class AmazonCatalogIT  extends BaseIT{
+public class AmazonCatalogIT extends BaseIT {
+
     private static final String AMAZON_CATALOG_NAME = "java:global/bookstore-app/bookstore-ejb/AmazonCatalog";
     private static AmazonCatalog amazonCatalog;
-    
-    
+
     public AmazonCatalogIT() {
     }
+
     @Override
     protected void lookupService() throws Exception {
         Context jndiContext = new InitialContext();
         amazonCatalog = (AmazonCatalog) jndiContext.lookup(AMAZON_CATALOG_NAME);
     }
+
     @Test
-    public void itemSearchTest(){
+    public void itemSearchTest() {
         List<BookInfo> resultList = amazonCatalog.itemSearch("jpa apress");
         System.out.println();
         System.out.println("Number of books found: " + resultList.size());
-        for(BookInfo book : resultList){
+        for (BookInfo book : resultList) {
             log("valid book: " + book.toString());
         }
     }
 
     @Test
-    public void itemLookupTest(){
+    public void itemSearchPaged() {
+        boolean more = true;
+        BigInteger pageToLoad = BigInteger.ONE;
+        while (more) {
+            PageInfo pageInfo = amazonCatalog.itemSearchPaged("java", pageToLoad);
+            System.out.println();
+            List<BookInfo> resultList = pageInfo.getBookItems();
+            System.out.println("Number of books found: " + pageInfo.getBookItems().size());
+            for (BookInfo book : resultList) {
+                log("valid book: " + book.toString());
+            }
+            System.out.println("LastPageLoaded: " + pageInfo.getLastPageLoaded());
+            more = pageInfo.isMore();
+            pageToLoad = pageInfo.getLastPageLoaded().add(BigInteger.ONE);
+        }
+    }
+
+    @Test
+    public void itemLookupTest() {
         BookDTO book = amazonCatalog.itemLookup("0596009208");
         System.out.println();
-        log("look for book: " + "ISBN: " + book.getIsbn() + 
-                " | Title: " + book.getTitle() + 
-                " | Authors: " + book.getAuthors() + 
-                " | Publisher: " + book.getPublisher() +  
-                " | Binding: " + book.getBinding() + 
-                " | Number of Pages: " + book.getNumberOfPages() + 
-                " | Publication Year: " + book.getPublicationYear() +
-                " | Price: " + book.getPrice());
+        log("look for book: " + "ISBN: " + book.getIsbn()
+                + " | Title: " + book.getTitle()
+                + " | Authors: " + book.getAuthors()
+                + " | Publisher: " + book.getPublisher()
+                + " | Binding: " + book.getBinding()
+                + " | Number of Pages: " + book.getNumberOfPages()
+                + " | Publication Year: " + book.getPublicationYear()
+                + " | Price: " + book.getPrice());
     }
 }

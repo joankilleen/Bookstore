@@ -1,5 +1,6 @@
 package org.books.application;
 
+import java.math.BigInteger;
 import java.util.List;
 import javax.ejb.Remote;
 import javax.interceptor.Interceptors;
@@ -8,6 +9,7 @@ import org.books.application.exception.BookNotFoundException;
 import org.books.application.util.Tracer;
 import org.books.data.dto.BookDTO;
 import org.books.data.dto.BookInfo;
+import org.books.data.dto.PageInfo;
 
 @Remote
 
@@ -38,6 +40,7 @@ public interface CatalogService {
          */
         public List<BookInfo> searchBooks(String keywords);
         
+        public PageInfo searchBooksPaged(String keywords, BigInteger pageToLoad);
         /**
          * Updates the data of a book.
          * @param book the data of the book to be updated

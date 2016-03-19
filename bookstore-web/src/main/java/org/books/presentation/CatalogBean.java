@@ -6,6 +6,7 @@
 package org.books.presentation;
 
 import java.io.Serializable;
+import java.math.BigInteger;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.logging.Level;
@@ -18,6 +19,7 @@ import org.books.application.*;
 import org.books.application.exception.BookNotFoundException;
 import org.books.data.dto.BookDTO;
 import org.books.data.dto.BookInfo;
+import org.books.data.dto.PageInfo;
 import org.books.util.MessageFactory;
 
 /**
@@ -33,15 +35,29 @@ public class CatalogBean implements Serializable {
     private BookInfo selectedBook;
     private BookDTO selectedBookFullInfo = null;
     private String isbn;
-    private List <BookInfo> books;
+    //private List <BookInfo> books;
+    private PageInfo pageInfo = new PageInfo();
     private static final String NO_BOOK_FOUND_ID = "org.books.presentation.NO_BOOK_FOUND";
+    private static final Logger LOG = Logger.getLogger(CatalogBean.class.getName());
+    
 
-    public List<BookInfo> getBooks() {
-        return books;
+    public PageInfo getPageInfo() {
+        return pageInfo;
     }
 
+    public void setPageInfo(PageInfo pageInfo) {
+        this.pageInfo = pageInfo;
+    }
+
+    public BigInteger getLastPageLoaded() {
+        return pageInfo.getLastPageLoaded();
+    }
+
+    public List<BookInfo> getBooks() {
+        return pageInfo.getBookItems();
+    }
     public void setBooks(List<BookInfo> books) {
-        this.books = books;
+        pageInfo.setBookItems(books);
     }
     private String keywords;
 
@@ -70,9 +86,7 @@ public class CatalogBean implements Serializable {
     }
  
 
-    public void setBooks(ArrayList<BookInfo> books) {
-        this.books = books;
-    }
+    
 
     public String getKeywords() {
         return keywords;
@@ -93,12 +107,9 @@ public class CatalogBean implements Serializable {
  
     
     public String searchBook(){
+        pageInfo = new PageInfo();
+        searchPaged(BigInteger.ONE);
         
-        books = catalogService.searchBooks(this.keywords);
-        if (books.isEmpty()) {
-            MessageFactory.info(NO_BOOK_FOUND_ID);
-            return null;
-        }
         return null;
     }
     
@@ -106,4 +117,24 @@ public class CatalogBean implements Serializable {
         this.selectedBook = book;
         return "bookDetails";
     }
+    
+    public String next(){
+        searchPaged(pageInfo.getLastPageLoaded().add(BigInteger.ONE));
+        return null;
+    }
+    
+    private void searchPaged(BigInteger page){
+        PageInfo newPageInfo = catalogService.searchBooksPaged(this.keywords, page);
+        for(BookInfo nextInfo: newPageInfo.getBookItems()){
+            pageInfo.getBookItems().add(nextInfo);
+        }
+        if (pageInfo.getBookItems().isEmpty()) {
+            MessageFactory.info(NO_BOOK_FOUND_ID);
+        }
+        
+        pageInfo.setLastPageLoaded(newPageInfo.getLastPageLoaded());
+        pageInfo.setMore(newPageInfo.isMore());
+    }
+    
+    
 }

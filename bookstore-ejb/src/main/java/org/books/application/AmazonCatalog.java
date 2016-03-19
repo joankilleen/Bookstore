@@ -5,10 +5,12 @@
  */
 package org.books.application;
 
+import java.math.BigInteger;
 import java.util.List;
 import javax.ejb.Remote;
 import org.books.data.dto.BookDTO;
 import org.books.data.dto.BookInfo;
+import org.books.data.dto.PageInfo;
 
 /**
  *
@@ -18,6 +20,7 @@ import org.books.data.dto.BookInfo;
 public interface AmazonCatalog  {
     
     public List<BookInfo> itemSearch(String keywords);
+    public PageInfo itemSearchPaged(String keywords, BigInteger pageToLoad);
     public BookDTO itemLookup(String isbn);
     
 }
