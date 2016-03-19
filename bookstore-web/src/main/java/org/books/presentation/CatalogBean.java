@@ -107,7 +107,7 @@ public class CatalogBean implements Serializable {
  
     
     public String searchBook(){
-        
+        pageInfo = new PageInfo();
         searchPaged(BigInteger.ONE);
         
         return null;
