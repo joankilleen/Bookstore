@@ -13,11 +13,12 @@
             </ui:define>  
             <ui:define name="content">
                 <h:form id="main">
-                    <h:panelGrid columns ="4">
+                    <h:panelGrid columns ="5">
                         <h:outputLabel for="keywords" value="#{texts.keywords}"/>
                         <h:inputText id="keywords" value="#{catalogBean.keywords}" required="true"
                                      requiredMessage="#{texts.enterAValue}"/>
                         <h:commandButton value="#{texts.searchBook}" action="#{catalogBean.searchBook()}"/>
+                        <h:commandButton value="next" action="#{catalogBean.next()}" rendered="#{catalogBean.pageInfo.more}"/>
                         <h:message for="keywords" infoClass="info" errorClass="error"/>
                         
                     </h:panelGrid>
@@ -50,8 +51,7 @@
                         </h:column>
                         
                     </h:dataTable>
-                    <h:panelGrid columns="2">
-                        <h:commandButton value="prev" action="#{catalogBean.prev()}" rendered="#{catalogBean.pageInfo.more}"/>
+                    <h:panelGrid columns="1">
                         <h:commandButton value="next" action="#{catalogBean.next()}" rendered="#{catalogBean.pageInfo.more}"/> 
                     </h:panelGrid>
                 </h:form>

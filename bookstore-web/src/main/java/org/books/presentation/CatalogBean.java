@@ -37,8 +37,9 @@ public class CatalogBean implements Serializable {
     private String isbn;
     //private List <BookInfo> books;
     private PageInfo pageInfo = new PageInfo();
-    private BigInteger lastPageLoaded = BigInteger.ZERO;
     private static final String NO_BOOK_FOUND_ID = "org.books.presentation.NO_BOOK_FOUND";
+    private static final Logger LOG = Logger.getLogger(CatalogBean.class.getName());
+    
 
     public PageInfo getPageInfo() {
         return pageInfo;
@@ -49,14 +50,9 @@ public class CatalogBean implements Serializable {
     }
 
     public BigInteger getLastPageLoaded() {
-        return lastPageLoaded;
+        return pageInfo.getLastPageLoaded();
     }
 
-    public void setLastPageLoaded(BigInteger lastPageLoaded) {
-        this.lastPageLoaded = lastPageLoaded;
-    }
-
-    
     public List<BookInfo> getBooks() {
         return pageInfo.getBookItems();
     }
@@ -123,18 +119,22 @@ public class CatalogBean implements Serializable {
     }
     
     public String next(){
-        searchPaged(lastPageLoaded.add(BigInteger.ONE));
+        searchPaged(pageInfo.getLastPageLoaded().add(BigInteger.ONE));
         return null;
     }
-    public String prev(){
-        searchPaged(lastPageLoaded.subtract(BigInteger.ONE));
-        return null;
-    }
+    
     private void searchPaged(BigInteger page){
-        pageInfo = catalogService.searchBooksPaged(this.keywords, page);
+        PageInfo newPageInfo = catalogService.searchBooksPaged(this.keywords, page);
+        for(BookInfo nextInfo: newPageInfo.getBookItems()){
+            pageInfo.getBookItems().add(nextInfo);
+        }
         if (pageInfo.getBookItems().isEmpty()) {
             MessageFactory.info(NO_BOOK_FOUND_ID);
         }
-        lastPageLoaded = pageInfo.getLastPageLoaded();
+        
+        pageInfo.setLastPageLoaded(newPageInfo.getLastPageLoaded());
+        pageInfo.setMore(newPageInfo.isMore());
     }
+    
+    
 }
