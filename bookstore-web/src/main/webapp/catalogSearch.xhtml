@@ -22,7 +22,8 @@
                         <h:message for="keywords" infoClass="info" errorClass="error"/>
                         
                     </h:panelGrid>
-                    <h:dataTable value="#{catalogBean.books}" var="book" rendered="#{not empty catalogBean.books}">
+                    <h:dataTable  value="#{catalogBean.books}" var="book" rendered="#{not empty catalogBean.books}">
+                        <f:ajax event="click" execute="@form" listener="#{catalogBean.next()}" render="@this"/>
                         <h:column>
                             <f:facet name="header">
                                 <h:outputText value="#{texts.title}"/>
