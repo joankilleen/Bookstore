@@ -12,17 +12,19 @@
                 </ui:include>
             </ui:define>  
             <ui:define name="content">
-                <h:form id="main">
-                    <h:panelGrid columns ="5">
+                <h:form onsubmit="document.body.style.cursor='wait'" id="main">
+                    <h:panelGrid columns ="6">
                         <h:outputLabel for="keywords" value="#{texts.keywords}"/>
                         <h:inputText id="keywords" value="#{catalogBean.keywords}" required="true"
                                      requiredMessage="#{texts.enterAValue}"/>
                         <h:commandButton value="#{texts.searchBook}" action="#{catalogBean.searchBook()}"/>
-                        <h:commandButton value="next" action="#{catalogBean.next()}" rendered="#{catalogBean.pageInfo.more}"/>
+                        <h:commandButton value="#{texts.next}" action="#{catalogBean.next()}" rendered="#{catalogBean.pageInfo.more}"/>
+                        <h:commandButton value="#{texts.clear}" action="#{catalogBean.clear()}" rendered="#{not empty catalogBean.books}"/>
                         <h:message for="keywords" infoClass="info" errorClass="error"/>
                         
                     </h:panelGrid>
-                    <h:dataTable value="#{catalogBean.books}" var="book" rendered="#{not empty catalogBean.books}">
+                    <h:dataTable  value="#{catalogBean.books}" var="book" rendered="#{not empty catalogBean.books}">
+                        <f:ajax event="click" execute="@form" listener="#{catalogBean.next()}" render="@this"/>
                         <h:column>
                             <f:facet name="header">
                                 <h:outputText value="#{texts.title}"/>
@@ -52,7 +54,7 @@
                         
                     </h:dataTable>
                     <h:panelGrid columns="1">
-                        <h:commandButton value="next" action="#{catalogBean.next()}" rendered="#{catalogBean.pageInfo.more}"/> 
+                        <h:commandButton value="#{texts.next}" action="#{catalogBean.next()}" rendered="#{catalogBean.pageInfo.more}"/> 
                     </h:panelGrid>
                 </h:form>
                 

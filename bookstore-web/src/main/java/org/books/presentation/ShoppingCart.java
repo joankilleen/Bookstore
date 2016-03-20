@@ -15,6 +15,7 @@ import java.util.Locale;
 import java.util.logging.Logger;
 import javax.enterprise.context.SessionScoped;
 import javax.inject.Named;
+import org.books.data.dto.BookDTO;
 import org.books.data.dto.BookInfo;
 
 /**
@@ -65,6 +66,7 @@ public class ShoppingCart implements Serializable {
             items.add(newCartItem);
         }
     }
+    
 
     public void deleteItem(CartItem item) {
         items.remove(item);

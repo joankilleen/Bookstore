@@ -29,6 +29,7 @@
                         <h:outputText id="publisher" value="#{catalogBean.selectedBook.publisher}"/>
                         <h:outputText value="#{texts.yearPublication}" styleClass="important"/> 
                         <h:outputText id="year" value="#{catalogBean.selectedBook.publicationYear}"/>
+                        <h:commandButton value="#{texts.addToCart}" action="#{shoppingCart.addItem(catalogBean.selectedBookInfo)}"/>
                     </h:panelGrid>
                     <br></br>
                     <h:commandLink value="#{texts.backLink}" action="catalogSearch"/>
