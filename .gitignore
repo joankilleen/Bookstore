@@ -1,0 +1,6 @@
+/bookstore-rest/target/
+/bookstore-test/target/
+/bookstore-ejb/target/
+/bookstore-jpa/target/
+/bookstore-app/target/
+/bookstore-web/target/
